@@ -1,6 +1,8 @@
 // Package distance calculates the edit distance between strings.
 package distance
 
+// Distance calculates the edit distance recursively between two
+// strings using the Levenshtein distance.
 func Distance(s1, s2 string) int {
 	// Check whether the strings are equal.
 	if s1 == s2 {
