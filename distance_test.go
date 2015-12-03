@@ -14,6 +14,7 @@ func TestLevenshteinDistanceIsValid(t *testing.T) {
 		{"Hello", "hello", 1},
 		{"Sup", "Sup\n", 1},
 		{"spartan", "sports", 3},
+		{"axxxxx", "xxxxxb", 2},
 	}
 	// Test using all of the sample data.
 	for _, sample := range samples {
