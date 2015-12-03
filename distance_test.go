@@ -18,7 +18,7 @@ func TestLevenshteinDistanceIsValid(t *testing.T) {
 	}
 	// Test using all of the sample data.
 	for _, sample := range samples {
-		dist := Distance(sample.first, sample.second)
+		dist := Levenshtein(sample.first, sample.second)
 		if dist != sample.expected {
 			t.Errorf("expected: %d, got %d", sample.expected, dist)
 		}

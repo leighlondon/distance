@@ -23,9 +23,9 @@ func Levenshtein(s1, s2 string) int {
 	// Calculate the edit distance recursively.
 	// Take the minimum of three different distances.
 	return min(min(
-		Distance(s1, s2[0:len(s2)-1])+1,
-		Distance(s1[0:len(s1)-1], s2)+1),
-		Distance(s1[0:len(s1)-1], s2[0:len(s2)-1])+cost)
+		Levenshtein(s1, s2[0:len(s2)-1])+1,
+		Levenshtein(s1[0:len(s1)-1], s2)+1),
+		Levenshtein(s1[0:len(s1)-1], s2[0:len(s2)-1])+cost)
 }
 
 // min returns the smaller of two integers.
