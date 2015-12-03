@@ -16,7 +16,8 @@ func Distance(s1, s2 string) int {
 		cost = 0
 	}
 	return min(min(
-		Distance(s1, s2[0:len(s2)-1])+1, Distance(s1[0:len(s1)-1], s2)+1),
+		Distance(s1, s2[0:len(s2)-1])+1,
+		Distance(s1[0:len(s1)-1], s2)+1),
 		Distance(s1[0:len(s1)-1], s2[0:len(s2)-1])+cost)
 }
 
